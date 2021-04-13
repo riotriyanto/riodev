@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-04-13 06:17:16
+/* Smarty version 3.1.34-dev-7, created on 2021-04-13 11:06:15
   from 'C:\xampp\htdocs\rto_base\views\template\template_front\prospera\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_60751b4c593798_84224414',
+  'unifunc' => 'content_60755f07a93f70_32491173',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7b0a6df16a1055898dcf151c0b272be0d0372aaf' => 
     array (
       0 => 'C:\\xampp\\htdocs\\rto_base\\views\\template\\template_front\\prospera\\index.tpl',
-      1 => 1618287434,
+      1 => 1618304773,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60751b4c593798_84224414 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60755f07a93f70_32491173 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?php echo $_smarty_tpl->tpl_vars['data']->value['title'];?>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+    <meta property="og:title" content="BERANDA - Rio Web Developer | Jasa Buat Website" />
+    <meta property="og:description" content="Rio Web Developer | Jasa Buat Website" />
+    <meta name="keywords" content="Rio, RioDev, Rio Dev,rio dev, Web, Developer, |, Jasa, Buat, Website, Jogja, buat web, buat website, web sekolah,aplikasi web,E-Raport,raport online,raport,blogspot,wordpress,web developer, web, developer, yogyakarta, jogja, gunungkidul, bantul, sleman, php, css, javascript, jquery, bootstrap, responsive, buat web jogja, buat web jogja, jasa buat web jogja, jasa buat website jogja, jasa buat web,jasa buat website">
+    <meta property="og:image" itemprop="image" content="<?php echo $_smarty_tpl->tpl_vars['rootdir']->value;?>
+views/assets/aplikasi/<?php echo $_smarty_tpl->tpl_vars['dataaplikasi']->value['gambar'];?>
+" />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+
+
+    <title><?php echo $_smarty_tpl->tpl_vars['data']->value['set']['nama_singkat_app'];?>
 </title>
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['theme_path']->value;?>
 /css/components.css">
@@ -50,6 +62,52 @@ function content_60751b4c593798_84224414 (Smarty_Internal_Template $_smarty_tpl)
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['theme_path']->value;?>
 /js/jquery-ui.min.js"><?php echo '</script'; ?>
 >
+    <style type="text/css">
+      /* wa */
+.fixed-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 9999;
+}
+.fixed-whatsapp:before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 34px 34px;
+  background-position: center center;
+  width: 50px;
+  height: 50px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3csvg viewBox='0 0 24 24' width='32' height='32' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cg%3e%3cpath style='fill:%23ffffff' d='M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17,15.44C16.8,16 15.76,16.54 15.3,16.56C14.84,16.58 14.83,16.92 12.34,15.83C9.85,14.74 8.35,12.08 8.23,11.91C8.11,11.74 7.27,10.53 7.31,9.3C7.36,8.08 8,7.5 8.26,7.26C8.5,7 8.77,6.97 8.94,7H9.41C9.56,7 9.77,6.94 9.96,7.45L10.65,9.32C10.71,9.45 10.75,9.6 10.66,9.76L10.39,10.17L10,10.59C9.88,10.71 9.74,10.84 9.88,11.09C10,11.35 10.5,12.18 11.2,12.87C12.11,13.75 12.91,14.04 13.15,14.17C13.39,14.31 13.54,14.29 13.69,14.13L14.5,13.19C14.69,12.94 14.85,13 15.08,13.08L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C10.03,22 8.2,21.43 6.65,20.45L2,22L3.55,17.35C2.57,15.8 2,13.97 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12C4,13.72 4.54,15.31 5.46,16.61L4.5,19.5L7.39,18.54C8.69,19.46 10.28,20 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z'%3e%3c/path%3e%3c/g%3e%3c/svg%3e");
+  background-color: #00c853;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+}
+/* endwa */
+/* load */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #fff;
+}
+.preloader .loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font: 14px arial;
+}
+/* endload */
+
+    </style>
   </head>  
   
   <body class="size-1140">
@@ -60,7 +118,7 @@ function content_60751b4c593798_84224414 (Smarty_Internal_Template $_smarty_tpl)
         <div class="line">
           <div class="s-12 m-6 l-6">
             <div class="top-bar-contact">
-              <p class="text-size-12">Contact Us: <?php echo $_smarty_tpl->tpl_vars['data']->value['set']['telp'];?>
+              <p class="text-size-12">Kontak : <?php echo $_smarty_tpl->tpl_vars['data']->value['set']['telp'];?>
  | <a class="text-orange-hover" href="mailto:<?php echo $_smarty_tpl->tpl_vars['data']->value['set']['email'];?>
 "><?php echo $_smarty_tpl->tpl_vars['data']->value['set']['email'];?>
 </a></p>
@@ -69,13 +127,13 @@ function content_60751b4c593798_84224414 (Smarty_Internal_Template $_smarty_tpl)
           <div class="s-12 m-6 l-6">
             <div class="right">
               <ul class="top-bar-social right">
-                <li><a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
+                <li><a href="<?php echo $_smarty_tpl->tpl_vars['data']->value['set']['fb'];?>
 "><i class="icon-facebook_circle text-orange-hover"></i></a></li>
-                <li><a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
+                <li><a href="<?php echo $_smarty_tpl->tpl_vars['data']->value['set']['tw'];?>
 "><i class="icon-twitter_circle text-orange-hover"></i></a> </li>
-                <li><a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
+                <li><a href="mailto:<?php echo $_smarty_tpl->tpl_vars['data']->value['set']['email'];?>
 "><i class="icon-google_plus_circle text-orange-hover"></i></a></li>
-                <li><a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
+                <li><a href="<?php echo $_smarty_tpl->tpl_vars['data']->value['set']['ig'];?>
 "><i class="icon-instagram_circle text-orange-hover"></i></a></li>
               </ul>
             </div>
@@ -95,12 +153,11 @@ views/assets/aplikasi/<?php echo $_smarty_tpl->tpl_vars['dataaplikasi']->value['
           </div>
           <div class="top-nav s-12 l-10">
             
-            <!-- <ul class="right chevron">
+            <ul class="right chevron">
               <li><a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
 ">Home</a></li>
-              <li><a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
-">Products</a></li>
-              <li><a>Services</a>
+              <li><a href="#projek">Projek</a></li>
+              <!-- <li><a>Services</a>
                 <ul>
                   <li><a>Service 1</a>
                     <ul>
@@ -110,14 +167,12 @@ views/assets/aplikasi/<?php echo $_smarty_tpl->tpl_vars['dataaplikasi']->value['
                   </li>
                   <li><a>Service 2</a></li>
                 </ul>
-              </li>
-              <li><a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
-">About</a></li>
-              <li><a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
-">Gallery</a></li>
-              <li><a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
-">Contact</a></li>
-            </ul> -->
+              </li> -->
+              <li><a href="#about">Tentang</a></li>
+              <!-- <li><a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
+">Gallery</a></li> -->
+              <li><a href="#kontak">Kontak</a></li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -129,34 +184,6 @@ views/assets/aplikasi/<?php echo $_smarty_tpl->tpl_vars['dataaplikasi']->value['
       <section class="section background-dark">
         <div class="line">
           <div class="carousel-fade-transition owl-carousel carousel-main carousel-nav-white carousel-wide-arrows">
-            <!-- <div class="item">
-              <div class="s-12 center">
-                <img src="<?php echo $_smarty_tpl->tpl_vars['theme_path']->value;?>
-/img/01-boxed.jpg" alt="">
-                <div class="carousel-content">
-                  <div class="padding-2x">
-                    <div class="s-12 m-12 l-8">
-                      <p class="text-white text-s-size-20 text-m-size-40 text-l-size-60 margin-bottom-40 text-thin text-line-height-1">Prospera is the New Amazing HTML5 Template</p>
-                      <p class="text-white text-size-16 margin-bottom-40">Duis autem vel eum iriure dolor in hendrerit in vulputate velit<br> esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>  
-                    </div>                  
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="s-12 center">
-                <img src="<?php echo $_smarty_tpl->tpl_vars['theme_path']->value;?>
-/img/02-boxed.jpg" alt="">
-                <div class="carousel-content">
-                  <div class="padding-2x">
-                    <div class="s-12 m-12 l-8">
-                      <p class="text-white text-s-size-20 text-m-size-40 text-l-size-60 margin-bottom-40 text-thin text-line-height-1">With Fully Responsive Components</p>
-                      <p class="text-white text-size-16 margin-bottom-30">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>    
-                    </div>                  
-                  </div>
-                </div>
-              </div>
-            </div> -->
             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['data']->value['slide'], 'slide');
 if ($_from !== null) {
@@ -188,43 +215,39 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       </section>
       
       <!-- Section 1 -->
-      <section class="section background-white"> 
+      <section class="section background-white" id="projek"> 
         <div class="line">
           <div class="margin">
-            <div class="s-12 m-12 l-4 margin-m-bottom">
-              <img class="margin-bottom" src="<?php echo $_smarty_tpl->tpl_vars['theme_path']->value;?>
-/img/img-01.jpg" alt="">
-              <h2 class="text-thin">Clean Design</h2>
-              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p> 
-              <a class="text-more-info text-primary-hover" href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['data']->value['projek'], 'p');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['p']->value) {
+?>
+              <div class="s-12 m-12 l-4 margin-m-bottom">
+                <img class="margin-bottom" src="<?php echo $_smarty_tpl->tpl_vars['rootdir']->value;?>
+views/assets/projek/<?php echo $_smarty_tpl->tpl_vars['p']->value['gambar'];?>
+" alt="">
+                <h2 class="text-thin"><?php echo $_smarty_tpl->tpl_vars['p']->value['judul'];?>
+</h2>
+                <p><?php echo $_smarty_tpl->tpl_vars['p']->value['keterangan'];?>
+</p> 
+                <a class="text-more-info text-primary-hover" href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
 ">Read more</a>                
-            </div>
-            <div class="s-12 m-12 l-4 margin-m-bottom">
-              <img class="margin-bottom" src="<?php echo $_smarty_tpl->tpl_vars['theme_path']->value;?>
-/img/img-02.jpg" alt="">
-              <h2 class="text-thin">Valid code</h2>
-              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p> 
-              <a class="text-more-info text-primary-hover" href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
-">Read more</a>                
-            </div>
-            <div class="s-12 m-12 l-4 margin-m-bottom">
-              <img class="margin-bottom" src="<?php echo $_smarty_tpl->tpl_vars['theme_path']->value;?>
-/img/img-03.jpg" alt="">
-              <h2 class="text-thin">Totally free</h2>
-              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p> 
-              <a class="text-more-info text-primary-hover" href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
-">Read more</a>                
-            </div>
+              </div>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           </div>
         </div>
       </section>
       
       <!-- Section 2 -->
-      <section class="section background-primary text-center">
+      <section class="section background-primary text-center" id="about">
         <div class="line">
           <div class="s-12 m-10 l-8 center">
-            <h2 class="headline text-thin text-s-size-30">We are Web Design Heroes</h2>
-            <p class="text-size-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+            <h2 class="headline text-thin text-s-size-30">We are Web Development Heroes</h2>
+            <p class="text-size-20">Jasa pembuatan website dan Sistem Informasi</p>
           </div>
         </div>  
       </section>
@@ -232,11 +255,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <!-- Section 3 -->
       <section class="section background-white">
         <div class="full-width text-center">
-          <img class="center margin-bottom-30" style="margin-top: -210px;" src="<?php echo $_smarty_tpl->tpl_vars['theme_path']->value;?>
-/img/bio.png" alt="">
+          <!-- <img class="center margin-bottom-30" style="margin-top: -210px;" src="<?php echo $_smarty_tpl->tpl_vars['theme_path']->value;?>
+/img/bio.png" alt=""> -->
+          <img class="center margin-bottom-30 img-thumbnail" style="max-width: 50%;margin-top: -160px;" src="<?php echo $_smarty_tpl->tpl_vars['rootdir']->value;?>
+/views/assets/aplikasi/gambar.jpg" alt="">
           <div class="line">
             <h2 class="headline text-thin text-s-size-30">Fully <span class="text-primary">Responsive</span> HTML5 Template</h2>
-            <p class="text-size-20 text-s-size-16 text-thin">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+            <p class="text-size-20 text-s-size-16 text-thin">Website sangat penting peranannya bagi perusahaan. Menjangkau lebih banyak pelanggan kapanpun & dimanapun. Tampilan responsive menambah kenyaman anda ketika menggunakan sistem.</p>
             <i class="icon-more_node_links icon2x text-primary margin-top-bottom-10"></i>
             <p class="text-size-20 text-s-size-16 text-thin text-primary">Try resize your browser window</p>
           </div>  
@@ -245,7 +270,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <hr class="break margin-top-bottom-0">
       
       <!-- Section 4 --> 
-      <section class="section background-white">
+      <!-- <section class="section background-white">
         <div class="line">
           <h2 class="text-thin headline text-center text-s-size-30 margin-bottom-50">From Our <span class="text-primary">Blog</span></h2>
           <div class="carousel-default owl-carousel carousel-wide-arrows">
@@ -369,21 +394,21 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
           </div>
         </div>    
-      </section>
+      </section> -->
       
     </main>
     
     <!-- FOOTER -->
-    <footer>
+    <footer id="kontak">
       <!-- Social -->
       <div class="background-primary padding text-center">
-        <a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['data']->value['set']['fb'];?>
 "><i class="icon-facebook_circle icon2x text-white"></i></a> 
-        <a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['data']->value['set']['tw'];?>
 "><i class="icon-twitter_circle icon2x text-white"></i></a>
-        <a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
+        <a href="mailto:<?php echo $_smarty_tpl->tpl_vars['data']->value['set']['email'];?>
 "><i class="icon-google_plus_circle icon2x text-white"></i></a>
-        <a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['data']->value['set']['ig'];?>
 "><i class="icon-instagram_circle icon2x text-white"></i></a>                                                                        
       </div>
       
@@ -393,21 +418,23 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           <div class="margin">
             <!-- Collumn 1 -->
             <div class="s-12 m-12 l-4 margin-m-bottom-2x">
-              <h4 class="text-uppercase text-strong">Our Philosophy</h4>
-              <p class="text-size-20"><em>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt."</em><p>
+              <h4 class="text-uppercase text-strong"><?php echo $_smarty_tpl->tpl_vars['data']->value['set']['nama_singkat_app'];?>
+</h4>
+              <p class="text-size-20"><em>"Membangun negeri dengan teknologi informasi."</em><p>
                             
               <div class="line">
-                <h4 class="text-uppercase text-strong margin-top-30">About Our Company</h4>
+                <h4 class="text-uppercase text-strong margin-top-30">Tentang</h4>
                 <div class="margin">
                   <div class="s-12 m-12 l-4 margin-m-bottom">
                     <a class="image-hover-zoom" href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
-"><img src="<?php echo $_smarty_tpl->tpl_vars['theme_path']->value;?>
-/img/blog-04.jpg" alt=""></a>
+"><img src="<?php echo $_smarty_tpl->tpl_vars['rootdir']->value;?>
+views/assets/aplikasi/<?php echo $_smarty_tpl->tpl_vars['dataaplikasi']->value['gambar'];?>
+" alt=""></a>
                   </div>
                   <div class="s-12 m-12 l-8 margin-m-bottom">
-                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                    <a class="text-more-info text-primary-hover" href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
-">Read more</a>
+                    <p>Web Developer berpengalaman sejak 2019.</p>
+                    <!-- <a class="text-more-info text-primary-hover" href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
+">Read more</a> -->
                   </div>
                 </div>
               </div>
@@ -415,13 +442,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             
             <!-- Collumn 2 -->
             <div class="s-12 m-12 l-4 margin-m-bottom-2x">
-              <h4 class="text-uppercase text-strong">Contact Us</h4>
+              <h4 class="text-uppercase text-strong">Kontak</h4>
               <div class="line">
                 <div class="s-1 m-1 l-1 text-center">
                   <i class="icon-placepin text-primary text-size-12"></i>
                 </div>
                 <div class="s-11 m-11 l-11 margin-bottom-10">
-                  <p><b>Adress:</b> Responsive Street 7, London, UK</p>
+                  <p><b>Alamat:</b> <?php echo $_smarty_tpl->tpl_vars['data']->value['set']['alamat'];?>
+</p>
                 </div>
               </div>
               <div class="line">
@@ -430,7 +458,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </div>
                 <div class="s-11 m-11 l-11 margin-bottom-10">
                   <p><a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
-" class="text-primary-hover"><b>E-mail:</b> contact@sampledomain.com</a></p>
+" class="text-primary-hover"><b>E-mail:</b> <?php echo $_smarty_tpl->tpl_vars['data']->value['set']['email'];?>
+</a></p>
                 </div>
               </div>
               <div class="line">
@@ -438,7 +467,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                   <i class="icon-smartphone text-primary text-size-12"></i>
                 </div>
                 <div class="s-11 m-11 l-11 margin-bottom-10">
-                  <p><b>Phone:</b> 0700 000 987</p>
+                  <p><b>Phone:</b> <?php echo $_smarty_tpl->tpl_vars['data']->value['set']['telp'];?>
+</p>
                 </div>
               </div>
               <div class="line">
@@ -446,7 +476,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                   <i class="icon-twitter text-primary text-size-12"></i>
                 </div>
                 <div class="s-11 m-11 l-11 margin-bottom-10">
-                  <p><a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
+                  <p><a href="<?php echo $_smarty_tpl->tpl_vars['data']->value['set']['tw'];?>
 " class="text-primary-hover"><b>Twitter</b></a></p>
                 </div>
               </div>
@@ -455,7 +485,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                   <i class="icon-facebook text-primary text-size-12"></i>
                 </div>
                 <div class="s-11 m-11 l-11">
-                  <p><a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
+                  <p><a href="<?php echo $_smarty_tpl->tpl_vars['data']->value['set']['fb'];?>
 " class="text-primary-hover"><b>Facebook</b></a></p>
                 </div>
               </div>
@@ -463,22 +493,22 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             
             <!-- Collumn 3 -->
             <div class="s-12 m-12 l-4">
-              <h4 class="text-uppercase text-strong">Leave a Message</h4>
+              <h4 class="text-uppercase text-strong">Kirim Pesan</h4>
               <form class="customform text-white">
                 <div class="line">
                   <div class="margin">
                     <div class="s-12 m-12 l-6">
-                      <input name="email" class="required email border-radius" placeholder="Your e-mail" title="Your e-mail" type="text" />
+                      <input name="email" class="required email border-radius" placeholder="E-mail" title="Your e-mail" type="text" />
                     </div>
                     <div class="s-12 m-12 l-6">
-                      <input name="name" class="name border-radius" placeholder="Your name" title="Your name" type="text" />
+                      <input name="name" class="name border-radius" placeholder="Nama anda" title="Your name" type="text" />
                     </div>
                   </div>
                 </div>
                 <div class="s-12">
-                  <textarea name="message" class="required message border-radius" placeholder="Your message" rows="3"></textarea>
+                  <textarea name="message" class="required message border-radius" placeholder="Pesan" rows="3"></textarea>
                 </div>
-                <div class="s-12"><button class="submit-form button background-primary border-radius text-white" type="submit">Submit Button</button></div> 
+                <div class="s-12"><button class="submit-form button background-primary border-radius text-white" type="submit">Kirim</button></div> 
               </form>
             </div>
           </div>
@@ -490,12 +520,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <section class="padding background-dark">
         <div class="line">
           <div class="s-12 l-6">
-            <p class="text-size-12">Copyright 2019, Vision Design - graphic zoo</p>
-            <p class="text-size-12">All images have been purchased from Bigstock. Do not use the images in your website.</p>
+            <p class="text-size-12">Copyright</p>
+            <p class="text-size-12"></p>
           </div>
           <div class="s-12 l-6">
             <a class="right text-size-12" href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
-" title="Responsee - lightweight responsive framework">Design and coding<br> by Responsee Team</a>
+" title="Responsee - lightweight responsive framework"></a>
           </div>
         </div>
       </section>
@@ -511,7 +541,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php echo '<script'; ?>
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['theme_path']->value;?>
 /js/template-scripts.js"><?php echo '</script'; ?>
->   
+>
+
+    <a class='fixed-whatsapp' href='https://api.whatsapp.com/send?phone=6282327775694' rel='hubungi Rio Dev' target='_blank' title='Whatsapp' />   
    </body>
 </html><?php }
 }

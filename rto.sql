@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Apr 04, 2020 at 12:02 PM
--- Server version: 5.7.29-0ubuntu0.18.04.1
--- PHP Version: 7.3.15-3+ubuntu18.04.1+deb.sury.org+1
+-- Host: 127.0.0.1
+-- Generation Time: Apr 13, 2021 at 11:06 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -33,7 +34,7 @@ CREATE TABLE `berita` (
   `url` text NOT NULL,
   `isi` text NOT NULL,
   `gambar` varchar(50) NOT NULL,
-  `postdate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `postdate` datetime NOT NULL DEFAULT current_timestamp(),
   `lastupdate` datetime DEFAULT NULL,
   `author` int(11) NOT NULL,
   `ket` enum('draf','pending','publish','blok') NOT NULL
@@ -115,8 +116,10 @@ INSERT INTO `menus` (`id_menu`, `parent`, `urut`, `url`, `nama_menu`, `icon`, `a
 (3, 2, 1, 'rtoadmin/aplikasi', 'Aplikasi', 'fa fa-circle-o', '1,2'),
 (5, 0, 1, 'rtoadmin', 'Dashboard', 'fa fa-dashboard', '1,2'),
 (8, 0, 2, 'rtoadmin/pageStatis', 'Managemen Halaman Statis', 'fa fa-copy', '1,2'),
-(9, 0, 3, '', 'Manajemen Berita', 'fa fa-news', '1,2'),
-(10, 9, 1, 'rtoadmin/kategori', 'Kategori Berita', '', '1,2');
+(9, 0, 3, '', 'Manajemen Berita', 'fa fa-book', '1,2'),
+(10, 9, 1, 'rtoadmin/kategori', 'Kategori Berita', '', '1,2'),
+(11, 0, 2, 'rtoadmin/slider', 'Managemen Slider', 'fa fa-copy', '1,2'),
+(12, 0, 2, 'rtoadmin/projek', 'Managemen Projek', 'fa fa-copy', '1,2');
 
 -- --------------------------------------------------------
 
@@ -139,6 +142,30 @@ INSERT INTO `pages` (`id_page`, `judul`, `isi`, `gambar`) VALUES
 (1, 'Home', '<h1 style=\"text-align: center;\"><strong>Home</strong></h1>\r\n<p>Ini adalah halaman beranda yeyeyeyeye</p>', ''),
 (2, 'Profil', '<h1 style=\"text-align: center;\"><strong>Profil</strong></h1>\r\n<p style=\"text-align: left;\">Ini adalah contoh halaman profil</p>', ''),
 (3, 'Kontak', '<h1 style=\"text-align: center;\"><strong>Kontak</strong></h1>\r\n<p>&nbsp;</p>\r\n<p>Kontak kami</p>', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projek`
+--
+
+CREATE TABLE `projek` (
+  `id_projek` int(11) NOT NULL,
+  `judul` varchar(50) NOT NULL,
+  `keterangan` text NOT NULL,
+  `gambar` text NOT NULL,
+  `aktif` enum('1','0') NOT NULL,
+  `urut` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `projek`
+--
+
+INSERT INTO `projek` (`id_projek`, `judul`, `keterangan`, `gambar`, `aktif`, `urut`) VALUES
+(15, 'Landing Page | Company Profile', 'Landing page adalah halaman dalam website yang didesain khusus dengan mindset marketing. Halaman inilah yang ditampilkan ketika pengunjung mengakses website', '13042021104257_1_scott-graham-5fNmWej4tAA-unsplash.jpg', '1', 1),
+(16, 'Toko Online', 'Website toko online memungkinkan anda untuk berbisnis jauh lebih mudah. Fitur lengkap secara penggunaan yang mudah akan menambah semangat dalam berbisnis online.', '13042021104458_1_taras-shypka-iFSvn82XfGo-unsplash.jpg', '1', 2),
+(17, 'Sistem Informasi', 'Website ini ditujukan untuk penggunaan khusus dengan banyak proses. Sistem dapat mempermudah pekerjaan anda. Sistem seperti apa yang anda butuhkan, kami siap membantu.', '13042021104613_1_freestocks-I_pOqP6kCOI-unsplash.jpg', '1', 3);
 
 -- --------------------------------------------------------
 
@@ -176,7 +203,31 @@ CREATE TABLE `setting` (
 --
 
 INSERT INTO `setting` (`id_setting`, `client`, `nama_app`, `nama_singkat_app`, `gambar`, `alamat`, `telp`, `fax`, `email`, `fb`, `tw`, `ig`, `nama_kepala`, `foto_kepala`, `nama_sekretaris`, `foto_sekretaris`, `sambutan`, `maps`, `bg1`, `bg2`, `bg3`, `tahun`) VALUES
-(1, 'Exara Media', 'WEB Profil Exara Media', 'ExaraMedia', '11022020015348_1_logo-dark.png', 'turi', '08', '878', 'r@r.com', 'fb', 'tw', '', 'Rio', 'kepala.png', 'Sekre', 'sekretaris.png', 'sambutan', '', '', '', '', '2020');
+(1, 'Rio Triyanto', 'Rio Triyanto', 'Rio Dev', '13042021083915_1_logo.png', 'Turi RT 06, Sidomulyo, Bambanglipuro, Bantul, Yogyakarta', '082327775694', '878', 'riotriyanto18@gmail.com', 'fb', 'tw', '', 'Rio', 'kepala.png', 'Sekre', 'sekretaris.png', 'sambutan', '', '', '', '', '2022');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `slider`
+--
+
+CREATE TABLE `slider` (
+  `id_slide` int(11) NOT NULL,
+  `judul` varchar(50) NOT NULL,
+  `keterangan` text NOT NULL,
+  `gambar` text NOT NULL,
+  `aktif` enum('1','0') NOT NULL,
+  `urut` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `slider`
+--
+
+INSERT INTO `slider` (`id_slide`, `judul`, `keterangan`, `gambar`, `aktif`, `urut`) VALUES
+(2, 'Teknologi Informasi', 'Website merupakan hal terpenting dalam dunia Teknologi Informasi', '13042021105448_1_slider1.png', '1', 2),
+(14, 'Pengguna Meningkat', 'Seiring berkembangnya era digital website semakin banyak yang menggunakan', '13042021105129_1_slider2.png', '1', 2),
+(15, 'Sistem Informasi', 'Ketepatan dan keakuratan suatau pekerjaan akan lebih mudah dengan sistem yang tertata', '13042021105517_1_slider2.png', '1', 3);
 
 -- --------------------------------------------------------
 
@@ -196,7 +247,7 @@ CREATE TABLE `users` (
   `ig` varchar(100) NOT NULL,
   `id_bidang` int(11) NOT NULL,
   `level_akses` enum('1','2','3') NOT NULL,
-  `foto` text,
+  `foto` text DEFAULT NULL,
   `last_login` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -223,6 +274,35 @@ ALTER TABLE `kategori_berita`
 --
 ALTER TABLE `menus`
   ADD PRIMARY KEY (`id_menu`);
+
+--
+-- Indexes for table `projek`
+--
+ALTER TABLE `projek`
+  ADD PRIMARY KEY (`id_projek`);
+
+--
+-- Indexes for table `slider`
+--
+ALTER TABLE `slider`
+  ADD PRIMARY KEY (`id_slide`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `projek`
+--
+ALTER TABLE `projek`
+  MODIFY `id_projek` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `slider`
+--
+ALTER TABLE `slider`
+  MODIFY `id_slide` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

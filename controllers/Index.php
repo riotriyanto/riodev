@@ -17,7 +17,8 @@
 			$data = array(
 					'title' => 'RTO-DEV',
 					'set'	=> $this->db_setting(),
-					'slide'	=> $this->db_slider()
+					'slide'	=> $this->db_slider(),
+					'projek'	=> $this->db_projek()
 			);
 			// d($data);
 			$this->smarty->assign('data', $this->db_getUser());
@@ -37,6 +38,11 @@
 		public function db_slider()
 		{
 			$qry = "SELECT * from slider where aktif=1";
+			return $this->db->get_results($qry);
+		}
+		public function db_projek()
+		{
+			$qry = "SELECT * from projek where aktif=1";
 			return $this->db->get_results($qry);
 		}
 	}
