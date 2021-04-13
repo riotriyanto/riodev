@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-03-20 02:54:14
+/* Smarty version 3.1.34-dev-7, created on 2021-04-13 06:17:16
   from 'C:\xampp\htdocs\rto_base\views\template\template_front\prospera\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_605555c6ccc425_53406016',
+  'unifunc' => 'content_60751b4c593798_84224414',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7b0a6df16a1055898dcf151c0b272be0d0372aaf' => 
     array (
       0 => 'C:\\xampp\\htdocs\\rto_base\\views\\template\\template_front\\prospera\\index.tpl',
-      1 => 1616205252,
+      1 => 1618287434,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605555c6ccc425_53406016 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60751b4c593798_84224414 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -60,7 +60,10 @@ function content_605555c6ccc425_53406016 (Smarty_Internal_Template $_smarty_tpl)
         <div class="line">
           <div class="s-12 m-6 l-6">
             <div class="top-bar-contact">
-              <p class="text-size-12">Contact Us: 082327775694 | <a class="text-orange-hover" href="mailto:riotriyanto18@gmail.com">riotriyanto18@gmail.com</a></p>
+              <p class="text-size-12">Contact Us: <?php echo $_smarty_tpl->tpl_vars['data']->value['set']['telp'];?>
+ | <a class="text-orange-hover" href="mailto:<?php echo $_smarty_tpl->tpl_vars['data']->value['set']['email'];?>
+"><?php echo $_smarty_tpl->tpl_vars['data']->value['set']['email'];?>
+</a></p>
             </div>
           </div>
           <div class="s-12 m-6 l-6">
@@ -85,8 +88,10 @@ function content_605555c6ccc425_53406016 (Smarty_Internal_Template $_smarty_tpl)
         <div class="line">
           <div class="s-12 l-2">
             <a href="<?php echo $_smarty_tpl->tpl_vars['basedir']->value;?>
-" class="logo"><img src="<?php echo $_smarty_tpl->tpl_vars['theme_path']->value;?>
-/img/logo-free.png" alt=""></a>
+" class="logo"><img style="max-width: 50px;" src="<?php echo $_smarty_tpl->tpl_vars['rootdir']->value;?>
+views/assets/aplikasi/<?php echo $_smarty_tpl->tpl_vars['dataaplikasi']->value['gambar'];?>
+" alt="<?php echo $_smarty_tpl->tpl_vars['data']->value['set']['nama_singkat_app'];?>
+"></a>
           </div>
           <div class="top-nav s-12 l-10">
             
@@ -124,7 +129,7 @@ function content_605555c6ccc425_53406016 (Smarty_Internal_Template $_smarty_tpl)
       <section class="section background-dark">
         <div class="line">
           <div class="carousel-fade-transition owl-carousel carousel-main carousel-nav-white carousel-wide-arrows">
-            <div class="item">
+            <!-- <div class="item">
               <div class="s-12 center">
                 <img src="<?php echo $_smarty_tpl->tpl_vars['theme_path']->value;?>
 /img/01-boxed.jpg" alt="">
@@ -151,7 +156,33 @@ function content_605555c6ccc425_53406016 (Smarty_Internal_Template $_smarty_tpl)
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['data']->value['slide'], 'slide');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['slide']->value) {
+?>
+              <div class="item">
+                <div class="s-12 center">
+                  <img src="<?php echo $_smarty_tpl->tpl_vars['rootdir']->value;?>
+views/assets/slider/<?php echo $_smarty_tpl->tpl_vars['slide']->value['gambar'];?>
+" alt="">
+                  <div class="carousel-content">
+                    <div class="padding-2x">
+                      <div class="s-12 m-12 l-8">
+                        <p class="text-white text-s-size-20 text-m-size-40 text-l-size-60 margin-bottom-40 text-thin text-line-height-1"><?php echo $_smarty_tpl->tpl_vars['slide']->value['judul'];?>
+</p>
+                        <p class="text-white text-size-16 margin-bottom-30"><?php echo $_smarty_tpl->tpl_vars['slide']->value['keterangan'];?>
+</p>    
+                      </div>                  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           </div>  
         </div>
       </section>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-03-20 02:33:40
+/* Smarty version 3.1.34-dev-7, created on 2021-04-13 07:06:54
   from 'C:\xampp\htdocs\rto_base\views\template\template_back\lte\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_605550f41aac07_99455309',
+  'unifunc' => 'content_607526eed16c16_59618908',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f609769072196224bb18165b57ee5cad74936c5e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\rto_base\\views\\template\\template_back\\lte\\footer.tpl',
-      1 => 1616203350,
+      1 => 1618290413,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605550f41aac07_99455309 (Smarty_Internal_Template $_smarty_tpl) {
+function content_607526eed16c16_59618908 (Smarty_Internal_Template $_smarty_tpl) {
 ?></div>
         <!-- /.col -->
       </div>
@@ -267,7 +267,42 @@ function content_605550f41aac07_99455309 (Smarty_Internal_Template $_smarty_tpl)
       cancelButtonText: 'Batal'
     }).then((result) => {
       if (result.value) {
-        window.location = link;
+        // window.location = link;
+        $.ajax({
+          url : link,
+          type : 'get',
+          dataType:'json',
+          success : function(data){
+            if (data.status) {
+                Swal.fire({
+                    type: 'success',
+                    title: data.pesan,
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                    window.setTimeout(function () {
+                        location.href = data.link; 
+                        console.log(data)
+                    }, 500); 
+              }
+              else{ 
+                  Swal.fire({
+                    type: 'error',
+                    title: data.pesan,
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+              };  
+          },
+          error : function(err){
+            Swal.fire({
+                    type: 'error',
+                    title: 'periksa koneksi internet',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+          }
+        })
       }
     })
   }
@@ -307,7 +342,8 @@ function content_605550f41aac07_99455309 (Smarty_Internal_Template $_smarty_tpl)
                   })
                   if (refresh != 't') {
                     window.setTimeout(function () {
-                        location.href = data.menu; 
+                        location.href = data.link; 
+                        console.log(data)
                     }, 500); 
                   }
               }

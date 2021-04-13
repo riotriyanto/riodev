@@ -241,7 +241,42 @@
       cancelButtonText: 'Batal'
     }).then((result) => {
       if (result.value) {
-        window.location = link;
+        // window.location = link;
+        $.ajax({
+          url : link,
+          type : 'get',
+          dataType:'json',
+          success : function(data){
+            if (data.status) {
+                Swal.fire({
+                    type: 'success',
+                    title: data.pesan,
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                    window.setTimeout(function () {
+                        location.href = data.link; 
+                        console.log(data)
+                    }, 500); 
+              }
+              else{ 
+                  Swal.fire({
+                    type: 'error',
+                    title: data.pesan,
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+              };  
+          },
+          error : function(err){
+            Swal.fire({
+                    type: 'error',
+                    title: 'periksa koneksi internet',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+          }
+        })
       }
     })
   }
@@ -281,7 +316,8 @@
                   })
                   if (refresh != 't') {
                     window.setTimeout(function () {
-                        location.href = data.menu; 
+                        location.href = data.link; 
+                        console.log(data)
                     }, 500); 
                   }
               }

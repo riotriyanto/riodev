@@ -24,7 +24,7 @@
         <div class="line">
           <div class="s-12 m-6 l-6">
             <div class="top-bar-contact">
-              <p class="text-size-12">Contact Us: 082327775694 | <a class="text-orange-hover" href="mailto:riotriyanto18@gmail.com">riotriyanto18@gmail.com</a></p>
+              <p class="text-size-12">Contact Us: {$data['set']['telp']} | <a class="text-orange-hover" href="mailto:{$data['set']['email']}">{$data['set']['email']}</a></p>
             </div>
           </div>
           <div class="s-12 m-6 l-6">
@@ -44,7 +44,7 @@
       <nav class="background-white background-primary-hightlight">
         <div class="line">
           <div class="s-12 l-2">
-            <a href="{$basedir}" class="logo"><img src="{$theme_path}/img/logo-free.png" alt=""></a>
+            <a href="{$basedir}" class="logo"><img style="max-width: 50px;" src="{$rootdir}views/assets/aplikasi/{$dataaplikasi['gambar']}" alt="{$data['set']['nama_singkat_app']}"></a>
           </div>
           <div class="top-nav s-12 l-10">
             
@@ -77,7 +77,7 @@
       <section class="section background-dark">
         <div class="line">
           <div class="carousel-fade-transition owl-carousel carousel-main carousel-nav-white carousel-wide-arrows">
-            <div class="item">
+            <!-- <div class="item">
               <div class="s-12 center">
                 <img src="{$theme_path}/img/01-boxed.jpg" alt="">
                 <div class="carousel-content">
@@ -102,7 +102,22 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
+            {foreach $data['slide'] as $slide}
+              <div class="item">
+                <div class="s-12 center">
+                  <img src="{$rootdir}views/assets/slider/{$slide['gambar']}" alt="">
+                  <div class="carousel-content">
+                    <div class="padding-2x">
+                      <div class="s-12 m-12 l-8">
+                        <p class="text-white text-s-size-20 text-m-size-40 text-l-size-60 margin-bottom-40 text-thin text-line-height-1">{$slide['judul']}</p>
+                        <p class="text-white text-size-16 margin-bottom-30">{$slide['keterangan']}</p>    
+                      </div>                  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {/foreach}
           </div>  
         </div>
       </section>

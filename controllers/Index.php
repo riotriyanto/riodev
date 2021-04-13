@@ -15,8 +15,11 @@
 		public function index()
 		{
 			$data = array(
-					'title' => 'RTO-DEV'
+					'title' => 'RTO-DEV',
+					'set'	=> $this->db_setting(),
+					'slide'	=> $this->db_slider()
 			);
+			// d($data);
 			$this->smarty->assign('data', $this->db_getUser());
 			$view = $this->smarty->fetch('home.tpl');
 			$this->view->renderFront($view, $data);
@@ -25,6 +28,16 @@
 		{
 			$qry = "select * from pages where id_page = 1";
 			return $this->db->get_single_result($qry);
+		}
+		public function db_setting()
+		{
+			$qry = "select * from setting";
+			return $this->db->get_single_result($qry);
+		}
+		public function db_slider()
+		{
+			$qry = "SELECT * from slider where aktif=1";
+			return $this->db->get_results($qry);
 		}
 	}
 ?>
